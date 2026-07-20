@@ -119,7 +119,7 @@
 									<li th:classappend="${node.contains(page) ? 'active' : ''}"><a th:href="@{~/}" th:text="${node.object.title}">About</a></li>
 								</th:block-->
 								
-									<li><a href="../2024/index.html">Actualité</a></li>
+									<li><a href="../2026/index.html">Actualité</a></li>
 								
 							
 
@@ -228,87 +228,97 @@
 			<section id="content" class="col-lg-12 col-md-12 col-sm-12">
 
 				<div class="cloud">
-					<h1>Année 2026 - 2027</h1>
+					<h1>Actualité</h1>
 				</div>
 
-				<div class="container" style="padding: 0px !important;">
-					<!-- Webticker Carousel - Start -->
-					<div class="posts" style="background: white !important">
+				<style>
+					.news-grid {
+						display: grid;
+						grid-template-columns: repeat(4, minmax(0, 1fr));
+						gap: 24px;
+						padding: 30px;
+					}
+					.news-card {
+						background: #fff;
+						border-radius: 14px;
+						overflow: hidden;
+						box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+					}
+					.news-card img {
+						width: 100%;
+						height: 190px;
+						object-fit: cover;
+						display: block;
+					}
+					.news-card-body {
+						padding: 18px;
+						flex: 1;
+					}
+					.news-date {
+						display: inline-block;
+						font-size: 13px;
+						font-weight: bold;
+						color: #6b8e23;
+						margin-bottom: 10px;
+					}
+					.news-card h2 {
+						font-size: 22px;
+						line-height: 1.2;
+						margin: 0 0 10px;
+					}
+					.news-card p {
+						font-size: 15px;
+						line-height: 1.6;
+						margin: 0;
+					}
+					.news-intro {
+						padding: 0 30px 10px;
+						font-size: 17px;
+						line-height: 1.7;
+					}
+					@media (max-width: 1199px) {
+						.news-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+					}
+					@media (max-width: 991px) {
+						.news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 20px; gap: 20px; }
+						.news-intro { padding: 0 20px 10px; }
+					}
+					@media (max-width: 575px) {
+						.news-grid { grid-template-columns: 1fr; padding: 15px; gap: 18px; }
+						.news-card img { height: 220px; }
+						.news-intro { padding: 0 15px 10px; font-size: 16px; }
+					}
+				</style>
 
-						<div id="Main-Carousel" class="umbra-carousel" >
-							
-
-
-						</div>
-
-
-					</div> <!-- Umbra Webticker / End -->
-
-					<script>
-						$(document).ready(function () {
-
-							var webtickerCarousel = $('#Main-Carousel');
-							webtickerCarousel.umbraWebticker({
-								items: 4,
-								itemWidth: 270,
-								navigation: true,
-								draggable: true,
-								allowEmptySpace: false,
-								navContainerClass: 'wtc-nav',
-								navClasses: ['wtc-prev', 'wtc-next'],
-								onHoverStop: true,
-								duration: 500,
-								slideAmount: 300,
-								slidingMode: 'item',
-								customModeClass: '',
-								displayOneItem: false,
-								autoplay: false,
-								direction: 'left',
-								interval: 5000,
-								easing: 'cubic-bezier(.86,-0.24,.1,1.23)',
-								width: '100%',
-								startEmpty: 0,
-								autoWidth: true,
-								slidingFilter: true,
-								tickerContainer: 'stage-container',
-								tickerOuterClass: 'mask',
-								tickerClass: 'stage',
-								playReverse: false,
-								itemElement: 'div',
-								stageElement: 'div',
-								animatePosition: true,
-								rssUrl: '',
-								feedLimit: 8,
-								feedTmp: '',
-								responsive: {
-									items: [
-										["425", 1],
-										["600", 2],
-										["1000", 3],
-										["1170", 4],
-									]
-								},
-								responsiveRefreshRate: 500,
-
-								// Callbacks
-								onWebtickerStart: function () {},
-								onWebtickerStop: function () {},
-								onWebtickerNext: function () {},
-								onWebtickerPrev: function () {},
-								onWebtickerResize: function () {},
-								onWebtickerPause: function () {}
-							});
-						});
-					</script>
-				</div>
-
-				<div class="content-bg" style="padding-top: 1px;">
-
-					<div class="col-12">
-						<a href="../2025/index.html" class="button green pull-left"><span>&#xf137;</span>Année précédente</a>
-						<a href="/2027" class="button green pull-right"><span>&#xf138;</span>Année suivante</a>
+				<div class="content-bg" style="padding-top: 20px;">
+					<div class="news-intro">
+						<p>Retrouvez ici une sélection d’actualités qui mettent en valeur la vie de l’école, les projets, les moments forts et l’accueil des familles. Cette page rassemble les contenus les plus parlants des publications récentes, avec un accent particulier sur la nouvelle page Facebook de l’école.</p>
 					</div>
-					<div class="clearfix"></div>
+					<div class="news-grid">
+						<div class="news-card"><img src="../media/actualites-collage-1.jpg" alt="Découverte de l'école"><div class="news-card-body"><span class="news-date">03/07/2026</span><h2>Découvrez notre école</h2><p>Une belle vidéo de présentation met en avant l’ambiance familiale de l’école, l’accueil des enfants et l’ouverture des inscriptions pour les nouvelles familles.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-2.jpg" alt="Accès à l'école"><div class="news-card-body"><span class="news-date">20/07/2026</span><h2>Accès à l’école pendant les travaux</h2><p>L’école reste accessible et l’équipe rassure les parents avec des informations pratiques pour arriver sereinement aux entrées malgré les changements autour du quartier.</p></div></div>
+						<div class="news-card"><img src="../media/6cc60887-95e2-453f-a2cd-3ffebf6ab356" alt="Fancy fair"><div class="news-card-body"><span class="news-date">18/05/2026</span><h2>Fancy Fair, un rendez-vous à ne pas manquer</h2><p>La Fancy Fair fait partie des grands moments de l’année. L’école y montre son dynamisme, sa créativité et le plaisir de partager un vrai temps festif en communauté.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-1.jpg" alt="Rentrée et accueil"><div class="news-card-body"><span class="news-date">16/08/2025</span><h2>Préparer la rentrée en confiance</h2><p>La communication de rentrée met l’accent sur l’accueil des familles, l’organisation pratique et la volonté d’accompagner les enfants dans un climat rassurant.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-2.jpg" alt="Réussite des élèves"><div class="news-card-body"><span class="news-date">17/06/2021</span><h2>Encourager les élèves pendant les CEB</h2><p>Un message simple mais important, qui souligne l’attention portée aux élèves dans les moments clés de leur parcours et la proximité de l’équipe éducative.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-1.jpg" alt="Vie de classe"><div class="news-card-body"><span class="news-date">11/07/2026</span><h2>Une école à taille humaine</h2><p>Les publications récentes montrent une école chaleureuse, où les enfants apprennent dans un cadre bienveillant, proche des familles et attentif au rythme de chacun.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-2.jpg" alt="Créativité à l'école"><div class="news-card-body"><span class="news-date">09/07/2026</span><h2>Créativité et expression au quotidien</h2><p>Entre ateliers, activités artistiques et projets de classe, l’école valorise les talents des enfants et leur donne de nombreuses occasions de s’exprimer.</p></div></div>
+						<div class="news-card"><img src="../media/6cc60887-95e2-453f-a2cd-3ffebf6ab356" alt="Rencontre des familles"><div class="news-card-body"><span class="news-date">08/07/2026</span><h2>Visites et rencontres avec les familles</h2><p>Les messages d’inscription insistent sur la disponibilité de l’école pour accueillir les parents, faire visiter les lieux et répondre concrètement aux questions.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-1.jpg" alt="Apprendre ensemble"><div class="news-card-body"><span class="news-date">06/07/2026</span><h2>Apprendre ensemble</h2><p>La page met régulièrement en avant une école où l’on apprend, où l’on grandit et où chaque enfant peut avancer dans un environnement positif et stimulant.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-2.jpg" alt="Bienveillance"><div class="news-card-body"><span class="news-date">04/07/2026</span><h2>Un cadre bienveillant</h2><p>Le ton des publications rappelle l’importance du bien-être à l’école, de la sécurité affective et d’un climat de confiance pour les enfants comme pour les parents.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-1.jpg" alt="Vie scolaire"><div class="news-card-body"><span class="news-date">28/06/2026</span><h2>Des moments qui font vivre l’école</h2><p>Fêtes, rendez-vous collectifs et petites annonces utiles donnent une image vivante de l’établissement et montrent une école active tout au long de l’année.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-2.jpg" alt="Projet d'équipe"><div class="news-card-body"><span class="news-date">22/06/2026</span><h2>Une équipe engagée</h2><p>À travers ses publications, l’école met en avant une équipe présente, impliquée et attentive, qui travaille chaque jour pour offrir un cadre de qualité.</p></div></div>
+						<div class="news-card"><img src="../media/6cc60887-95e2-453f-a2cd-3ffebf6ab356" alt="Découverte et curiosité"><div class="news-card-body"><span class="news-date">14/06/2026</span><h2>Découvrir, observer, progresser</h2><p>Les contenus partagés valorisent une école qui encourage la curiosité, les découvertes et les apprentissages concrets, aussi bien en maternelle qu’en primaire.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-1.jpg" alt="Ambiance de fête"><div class="news-card-body"><span class="news-date">05/06/2026</span><h2>Une ambiance de fête et de partage</h2><p>Autour des événements comme la Fancy Fair, on retrouve l’envie de rassembler les familles et de faire rayonner l’école dans une atmosphère conviviale.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-2.jpg" alt="Accueil des enfants"><div class="news-card-body"><span class="news-date">27/05/2026</span><h2>Un accueil pensé pour les enfants</h2><p>Les visuels et les textes donnent une impression claire : ici, les enfants sont accueillis avec attention, douceur et envie de les voir évoluer sereinement.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-1.jpg" alt="Vie de l'école"><div class="news-card-body"><span class="news-date">19/05/2026</span><h2>Une communication plus vivante</h2><p>La nouvelle page Facebook permet de mieux montrer la réalité du terrain, les projets, les sourires, les activités et tout ce qui fait le quotidien de l’école.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-2.jpg" alt="Classes et activités"><div class="news-card-body"><span class="news-date">12/05/2026</span><h2>Classes dynamiques et activités variées</h2><p>Les contenus valorisent une école où l’on retrouve à la fois les apprentissages fondamentaux et des moments plus ludiques ou créatifs.</p></div></div>
+						<div class="news-card"><img src="../media/6cc60887-95e2-453f-a2cd-3ffebf6ab356" alt="Familles et école"><div class="news-card-body"><span class="news-date">04/05/2026</span><h2>Une relation de confiance avec les familles</h2><p>Les publications importantes prennent le temps d’expliquer, de rassurer et de garder un contact simple avec les parents, ce qui renforce le lien école-familles.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-1.jpg" alt="Vie collective"><div class="news-card-body"><span class="news-date">26/04/2026</span><h2>Grandir aussi à travers la vie collective</h2><p>La vie d’école se construit dans les projets communs, les fêtes, les rencontres et les activités partagées qui permettent aux enfants d’évoluer ensemble.</p></div></div>
+						<div class="news-card"><img src="../media/actualites-collage-2.jpg" alt="École mise en valeur"><div class="news-card-body"><span class="news-date">18/04/2026</span><h2>Une école qui se montre telle qu’elle est</h2><p>Ce nouvel espace d’actualité permet de mettre en avant le meilleur de l’école : son énergie, son accueil, ses projets et sa vie quotidienne.</p></div></div>
+					</div>
 				</div>
 
 			</section>
