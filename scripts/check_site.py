@@ -58,18 +58,24 @@ def main():
         for ref in re.findall(r'url\([\'\"]?([^\)\'\"]+)', path.read_text()):
             if not (path.parent / ref).is_file():
                 failures.append(f'missing CSS asset: {ref}')
-    news = json.loads((ROOT / 'data/actualites.json').read_text())
+    life = json.loads((ROOT / 'data/vie-ecole.json').read_text())
     docs = json.loads((ROOT / 'data/documents.json').read_text())
-    assert len(news) == 20 and pages[ROOT/'2026/index.html'].cards == 20
+    assert len(life) == 3 and pages[ROOT/'vie-ecole/index.html'].cards == 3
     assert pages[ROOT/'index.html'].cards == 3
     assert len(docs) == 12
     for doc in docs:
         if not (ROOT/doc['file']).read_bytes().startswith(b'%PDF-'):
             failures.append(f'invalid PDF: {doc["file"]}')
-    assert not any('fbcdn.net' in p.read_text() or 'vrt_esjjemeppe' in p.read_text() for p in pages)
+    for path, parsed in pages.items():
+        source = path.read_text()
+        assert not any(token in source for token in ['fbcdn.net', 'vrt_esjjemeppe', 'Voir la publication', '<time', 'facebook.com/reel', 'facebook.com/permalink'])
+        assert not re.search(r'(?<![\w/])20(?:17|20|21|23|24|25|26)(?![\w/])', re.sub(r'<[^>]+>', '', source)), path
+        for ref in parsed.refs:
+            if 'facebook.com' in ref:
+                assert ref == 'https://www.facebook.com/profile.php?id=61579439886113', ref
     if failures:
         raise SystemExit('\n'.join(failures))
-    print(f'OK: {len(pages)} pages, {count} local references, 20 news items, 12 PDFs, 3 home news cards.')
+    print(f'OK: {len(pages)} pages, {count} local references, 3 evergreen topics, 12 PDFs, no visible dates or post links.')
 
 
 if __name__ == '__main__':

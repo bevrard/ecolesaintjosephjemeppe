@@ -1,0 +1,23 @@
+[
+  {
+    "title": "De l’espace pour jouer et se retrouver",
+    "category": "Le cadre de vie",
+    "text": "La cour et les espaces extérieurs offrent aux enfants des lieux pour bouger, partager une récréation et profiter du grand air.",
+    "image": "media/actualites/20.jpg",
+    "alt": "La cour de l’école, ses tables et ses jeux tracés au sol"
+  },
+  {
+    "title": "La nature, tout près des enfants",
+    "category": "Découvrir le vivant",
+    "text": "Un cadre verdoyant et un poulailler donnent à notre école son caractère rural, au cœur de Jemeppe-sur-Sambre. Un environnement propice à l’observation et à la découverte.",
+    "image": "media/actualites/19.jpg",
+    "alt": "Une chèvre dans les espaces extérieurs de l’école"
+  },
+  {
+    "title": "Apprendre aussi à vivre ensemble",
+    "category": "Grandir ensemble",
+    "text": "Les activités partagées et les projets de l’école donnent une place à l’entraide, à la créativité et au plaisir de découvrir ensemble.",
+    "image": "media/actualites/18.jpg",
+    "alt": "Des enfants et leur enseignante réunis autour d’un arbre dans le cadre d’une activité de l’école"
+  }
+]
