@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ecole Saint-Joseph Jemeppe-Sur-Sambre</title>
-  <link rel="alternate" href="https://ecolesaintjosephjemeppe.be/wlr_esjjemeppe" />
+  <link rel="alternate" href="https://ecolesaintjosephjemeppe.be/" />
   <entry>
     <title>Inscription</title>
-    <link rel="alternate" href="https://ecolesaintjosephjemeppe.be/wlr_esjjemeppe/2024/11/03/partage" />
+    <link rel="alternate" href="https://ecolesaintjosephjemeppe.be/2024/11/03/partage/index.html" />
     <published>2024-11-03T11:35:00Z</published>
     <summary>&lt;p&gt;N h&amp;eacute;sitez pas &amp;agrave; venir rencontrer notre &amp;eacute;cole. Et &amp;agrave; partager&lt;/p&gt;</summary>
   </entry>
